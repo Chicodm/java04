@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Pessoa> listaPessoas = new ArrayList<>();
+
+        listaPessoas.add(new Pessoa("João", 25));
+        listaPessoas.add(new Pessoa("Maria", 30));
+        listaPessoas.add(new Pessoa("Pedro", 22));
+
+        for (Pessoa pessoa : listaPessoas) {
+            System.out.println("A pessoa " + pessoa.getNome() + " tem " + pessoa.getIdade() + " anos.");
+        }
+    }
+}
+
+class Pessoa {
+    private String nome;
+    private int idade;
+
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+}
